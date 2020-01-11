@@ -49,6 +49,7 @@
 //********** APRS
 #define SEND_APRS 1 // Set to 0 to disable APRS
 #define APRS_CALLSIGN "NOCALL" // put your APRS callsign here, 6 characters. If your callsign is shorter add spaces
+
 #define APRS_SSID 'B' // put your APRS SSID here
 // 0 --> Your primary station usually fixed and message capable
 // 1 --> generic additional station, digi, mobile, wx, etc.
@@ -66,6 +67,13 @@
 // D --> Weather stations
 // E --> Truckers or generally full time drivers
 // F --> generic additional station, digi, mobile, wx, etc.
+
+#define APRS_DISPLAY_TABLE '/' // put desired APRS Display Table character here
+// / --> Primary symbol Table (Mostly stations)
+// \\ --> Alternate symbol table (Mostly Objects)
+#define APRS_DISPLAY_SYMBOL 'O' // put desired APRS Display Symbol character here
+// O --> Balloon (in the primary table)
+// See: http://www.aprs.net/vm/DOS/SYMBOLS.HTM
 
 #define APRS_FREQUENCY  432.500f //Mhz middle frequency
 

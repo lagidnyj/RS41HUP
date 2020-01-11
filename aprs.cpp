@@ -61,11 +61,13 @@ void aprs_send_position(GPSEntry gpsData, int8_t temperature, uint16_t voltage) 
   aprs_packet_counter ++;
 
   sprintf(packet_buffer,
-          ("!%02d%02d.%02u%c/%03d%02u.%02u%cO/A=%06ld/P%dS%dT%dV%d%s"),
+          ("!%02d%02d.%02u%c%c%03d%02u.%02u%c%c/A=%06ld/P%dS%dT%dV%d%s"),
           abs(la_degrees), la_minutes, la_h_minutes,
           la_degrees > 0 ? 'N' : 'S',
+          APRS_DISPLAY_TABLE,
           abs(lo_degrees), lo_minutes, lo_h_minutes,
           lo_degrees > 0 ? 'E' : 'W',
+          APRS_DISPLAY_SYMBOL,
           (gpsData.alt_raw/1000) * 3280 / 1000,
           aprs_packet_counter,
           gpsData.sats_raw,
