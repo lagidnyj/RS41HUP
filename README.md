@@ -40,6 +40,8 @@ All configs in ```config.h```
 * ```SEND_APRS``` Optionally send APRS packet every ```TX_DELAY``` * ```RTTY_TO_APRS_RATIO``` ms
 * ```APRS_CALLSIGN``` APRS callsign, 6 characters. If your callsign is shorter add spaces
 * ```APRS_SSID``` APRS SSID
+* ```APRS_DISPLAY_TABLE``` APRS Display Table
+* ```APRS_DISPLAY_SYMBOL``` APRS Display Symbol
 * ```APRS_COMMENT``` APRS comment
 * ```APRS_FREQUENCY``` APRS frequency in MHz
 * ```RTTY_TO_APRS_RATIO``` Number of RTTY frames between each APRS frame
@@ -69,7 +71,7 @@ Have a nice day ;)
      * Optionally turn off RTTY or APRS
      * Optionally turn off LED blinking
      * Added Morse (CW) support
-
+ * 10.01.2020 - Configurable APRS Display Symbol
 
 # TODO
  * Adding support for EmbiTZ IDE
