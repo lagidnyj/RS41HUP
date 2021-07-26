@@ -17,6 +17,7 @@ GPIO_InitTypeDef GPIO_Conf;
 ADC_InitTypeDef ADC_InitStructure;
 DMA_InitTypeDef DMA_InitStructure;
 
+__IO uint16_t ADCVal[2];
 
 #define ADC1_DR_Address    ((uint32_t)0x4001244C)
 #if defined(STM32F10X_CL)
