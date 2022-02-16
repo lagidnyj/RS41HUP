@@ -12,7 +12,7 @@
 
 
 //********** RTTY
-#define SEND_RTTY 1 // Set to 0 to disable RTTY
+#define SEND_RTTY 0 // Set to 0 to disable RTTY
 //**************RTTY Data Format**********************
 // $$$<callsign>,<frame#>,[<hh:mm:ss>],[<latitude>,<longitude>],[<height>],[<speed>],[<rtty comment>],[<radio chip temperature (°C)>],[<battery voltage>],[<used gps satellites>],[<good gps datasets>,<bad gps datasets>,<gps fix flags>]*<CRC>
 #define RTTY_CALLSIGN "NOCALL" // put your RTTY callsign here, max. 15 characters
@@ -48,9 +48,9 @@
 
 //********** APRS
 #define SEND_APRS 1 // Set to 0 to disable APRS
-#define APRS_CALLSIGN "NOCALL" // put your APRS callsign here, 6 characters. If your callsign is shorter add spaces
+#define APRS_CALLSIGN "UR3PDA" // put your APRS callsign here, 6 characters. If your callsign is shorter add spaces
 
-#define APRS_SSID 'B' // put your APRS SSID here
+#define APRS_SSID 'A' // put your APRS SSID here
 // 0 --> Your primary station usually fixed and message capable
 // 1 --> generic additional station, digi, mobile, wx, etc.
 // 2 --> generic additional station, digi, mobile, wx, etc.
@@ -71,17 +71,17 @@
 #define APRS_DISPLAY_TABLE '/' // put desired APRS Display Table character here
 // / --> Primary symbol Table (Mostly stations)
 // \\ --> Alternate symbol table (Mostly Objects)
-#define APRS_DISPLAY_SYMBOL 'O' // put desired APRS Display Symbol character here
+#define APRS_DISPLAY_SYMBOL 'X' // put desired APRS Display Symbol character here
 // O --> Balloon (in the primary table)
 // See: http://www.aprs.net/vm/DOS/SYMBOLS.HTM
 
 #define APRS_FREQUENCY  432.500f //Mhz middle frequency
 
-#define APRS_COMMENT " Hello from the sky!"
+#define APRS_COMMENT " VAISALA RS41 Tracker"
 #define RTTY_TO_APRS_RATIO 5 //transmit APRS packet with each x RTTY packet
 
 //********** Morse (CW)
-#define SEND_MORSE 1 // Set to 0 to disable CW
+#define SEND_MORSE 0 // Set to 0 to disable CW
 #define MORSE_PREFIX "DE NOCALL" // Start of the message
 #define SEND_MORSE_WWL 1 // in <WW-locator>
 #define SEND_MORSE_HEIGHT 0 // ASL <altitude>
@@ -91,15 +91,15 @@
 #define RTTY_TO_MORSE_RATIO 10 // Transmit morse message with each x RTTY packet
 
 //********* power definition**************************
-#define TX_POWER  0 // PWR 0...7 0- MIN ... 7 - MAX
-// 0 --> -1dBm
-// 1 --> 2dBm
-// 2 --> 5dBm
-// 3 --> 8dBm
-// 4 --> 11dBm
-// 5 --> 14dBm
-// 6 --> 17dBm
-// 7 --> 20dBm
+#define TX_POWER  7 // PWR 0...7 0- MIN ... 7 - MAX
+// 0 --> -1dBm 0.8mW
+// 1 --> 2dBm 1.6mW
+// 2 --> 5dBm 3.2mW
+// 3 --> 8dBm 6.3mW
+// 4 --> 11dBm 12.6mW
+// 5 --> 14dBm 25mW
+// 6 --> 17dBm 50mW
+// 7 --> 20dBm 100mW
 //****************************************************
 
 // Switch sonde ON/OFF via Button
