@@ -58,6 +58,6 @@ add_custom_target(program
         if (UNIX)
             #TODO
         else ()
-            COMMAND D:/Programy/stlink-1.3.0-win64/bin/st-flash --reset write ${BIN_FILE} 0x08000000
+            COMMAND C:/stlink-1.7.0-x86_64-w64-mingw32/bin/st-flash --reset write ${BIN_FILE} 0x08000000
         endif ()
         COMMENT "flashing ${BIN_FILE}")
